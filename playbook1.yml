@@ -1,0 +1,14 @@
+#Simple play book
+---
+ - name: play 1
+   hosts:  aws
+   tasks:
+     - name: Test
+       command:  date
+
+     - name: create a directory
+       command: mkdir /tmp/a5
+     - name: install httpd servce
+       apt:
+         name: apache2
+         state: present

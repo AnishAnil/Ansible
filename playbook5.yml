@@ -1,0 +1,18 @@
+#This is a self learning Playbook
+---
+  - name: Install nginx package
+    hosts: aws
+    become: true
+    tasks:
+    -
+      name: Execute a date command
+      command: date
+    -
+      name: Execute a command to display hosts file
+      command: cat /etc/hosts
+#    tasks:
+#      - name: install
+#        apt:
+#          pkg: nginx
+#          state: installed
+#          update_cache: true

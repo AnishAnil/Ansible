@@ -1,0 +1,12 @@
+#ansible play book2
+---
+  - name: make a directory
+    hosts: aws
+    tasks:
+     - name: execute a shell command
+       file:
+          path: /tmp/a10
+          state: directory
+          owner: ubuntu
+          group: ubuntu
+          mode:  755

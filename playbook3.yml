@@ -1,0 +1,13 @@
+#This is Self Learning for ANsible
+---
+  - name: This is to copy file from local to remote
+    hosts: aws
+    become: true
+    tasks:
+      - name: Copy module to copy files
+        copy:
+          src: /tmp/a2.txt
+          dest: /tmp/a2.txt
+          owner: ubuntu
+          group: ubuntu
+          mode: 0744
